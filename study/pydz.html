@@ -59,8 +59,9 @@
         font-size: 60px;
         font-weight: 700;
         color: #bcc2c6;
-        line-height: 80px;
+        line-height: 90px;
         text-align: center;
+        vertical-align: middle;
         border: 5px solid #bcc2c6;
         border-radius: 50px;
       }
@@ -198,9 +199,14 @@
         $single.removeClass('active');
         $multiple.addClass('active');
       }
-      if (Util.StorageGetter('freedon') === 'on') {
-        freedon = ON;
-        $freedon.addClass('active');
+      if (Util.StorageGetter('freedom') === 'on') {
+        freedom = ON;
+        $freedom.addClass('active');
+        $all.removeClass('active');
+        $single.removeClass('active');
+        $multiple.removeClass('active');
+        $sequen.removeClass('active');
+        $random.removeClass('active');
       }
       if (Util.StorageGetter('sound') === 'off') {
         sound = OFF;
